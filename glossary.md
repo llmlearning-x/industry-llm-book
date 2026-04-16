@@ -32,6 +32,7 @@
 | 英文 | 中文 | 说明 |
 |------|------|------|
 | DSPy | DSPy 框架 | Declarative Self-improving Python |
+| DPO | 直接偏好优化 | Direct Preference Optimization，人类偏好对齐方法 |
 
 ## E
 
@@ -80,6 +81,8 @@
 | LLM | 大语言模型 | Large Language Model |
 | LoRA | 低秩适配 | Low-Rank Adaptation，参数高效微调方法 |
 | LangChain | LangChain | LLM 应用开发框架 |
+| LangGraph | LangGraph | 基于状态机的Agent编排框架，适合生产环境 |
+| LangSmith | LangSmith | LangChain生态的追踪和评估平台 |
 
 ## M
 
@@ -89,6 +92,8 @@
 | MCP | 模型上下文协议 | Model Context Protocol |
 | Milvus | Milvus | 开源向量数据库 |
 | Multi-Agent | 多智能体 | 多个 Agent 协同工作的系统 |
+| MoE | 混合专家模型 | Mixture of Experts，稀疏激活的大模型架构 |
+| Multimodal RAG | 多模态RAG | 支持图文、表格、视频统一检索的RAG架构 |
 
 ## N
 
@@ -121,6 +126,7 @@
 | 英文 | 中文 | 说明 |
 |------|------|------|
 | RAG | 检索增强生成 | Retrieval-Augmented Generation |
+| RLHF | 人类反馈强化学习 | Reinforcement Learning from Human Feedback |
 | ROI | 投资回报率 | Return on Investment |
 
 ## S
@@ -128,6 +134,7 @@
 | 英文 | 中文 | 说明 |
 |------|------|------|
 | SFT | 监督微调 | Supervised Fine-Tuning |
+| SGLang | SGLang | 结构化生成语言，低延迟推理框架 |
 | SOAR | 安全编排自动化响应 | Security Orchestration, Automation and Response |
 | SOC | 安全运营中心 | Security Operations Center |
 
@@ -144,6 +151,7 @@
 | 英文 | 中文 | 说明 |
 |------|------|------|
 | Vector Database | 向量数据库 | 存储和检索向量嵌入的专用数据库 |
+| vLLM | vLLM | 高吞吐LLM推理引擎，支持PagedAttention |
 
 ## W-X-Y-Z
 
