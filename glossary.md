@@ -6,7 +6,9 @@
 
 | 英文 | 中文 | 说明 |
 |------|------|------|
-| Agent | 智能体 | 能够自主执行多步骤任务的 AI 系统 |
+| Agent | 智能体 | 能够自主规划、调用工具、执行任务的 AI 系统 |
+| Agentic RAG | 智能体化RAG | Agent驱动的检索增强生成，支持自主检索与多轮推理 |
+| AI Agent | AI智能体 | 同 Agent，强调具备行动能力的 AI 数字员工 |
 | AIGC | AI 生成内容 | Artificial Intelligence Generated Content |
 | AI | 人工智能 | Artificial Intelligence |
 | API | 应用编程接口 | Application Programming Interface |
@@ -51,6 +53,7 @@
 |------|------|------|
 | GPT | 生成式预训练变换器 | Generative Pre-trained Transformer |
 | GPU | 图形处理器 | Graphics Processing Unit |
+| GraphRAG | 图谱增强RAG | 从文档中抽取实体关系构建知识图谱实现推理 |
 
 ## H
 
@@ -134,6 +137,7 @@
 |------|------|------|
 | Token | 词元 | 模型处理文本的最小单位 |
 | Transformer | Transformer 架构 | 基于自注意力机制的神经网络架构 |
+| IDC | 国际数据公司 | International Data Corporation |
 
 ## U-V
 
