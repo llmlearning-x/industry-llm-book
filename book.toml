@@ -9,8 +9,8 @@ build-dir = "book"
 
 [output.html]
 default-theme = "light"
-git-repository-url = "https://github.com/your-repo/industry-llm-book"
-edit-url-template = "https://github.com/your-repo/industry-llm-book/edit/main/{path}"
+git-repository-url = "https://github.com/llmlearning-x/industry-llm-book"
+edit-url-template = "https://github.com/llmlearning-x/industry-llm-book/edit/main/{path}"
 
 [output.html.search]
 enable = true
