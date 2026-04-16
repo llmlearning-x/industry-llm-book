@@ -47,6 +47,8 @@
 |------|------|------|
 | Fine-tuning | 微调 | 在预训练模型基础上进行领域适配训练 |
 | Few-shot | 少样本学习 | 用少量示例引导模型输出 |
+| Federated Learning | 联邦学习 | 多方联合训练模型，不共享原始数据 |
+| FRESH | FRESH模型 | 数据质量评估框架（时效/相关/准确/充分/一致） |
 
 ## G
 
@@ -67,6 +69,7 @@
 |------|------|------|
 | IoC | 损害指标 | Indicator of Compromise |
 | IoT | 物联网 | Internet of Things |
+| ISO/IEC 42001 | AI管理体系标准 | 首个全球可认证的AI管理体系国际标准 |
 
 ## J-K
 
@@ -128,6 +131,7 @@
 | RAG | 检索增强生成 | Retrieval-Augmented Generation |
 | RLHF | 人类反馈强化学习 | Reinforcement Learning from Human Feedback |
 | ROI | 投资回报率 | Return on Investment |
+| RBAC | 基于角色的访问控制 | Role-Based Access Control |
 
 ## S
 
@@ -158,4 +162,7 @@
 | 英文 | 中文 | 说明 |
 |------|------|------|
 | Zero-shot | 零样本学习 | 不提供示例直接让模型完成任务 |
+| LLM-as-Judge | LLM作为评判者 | 用强模型评估目标模型输出质量的方法 |
+| MVP | 最小可行产品 | Minimum Viable Product |
+| PoC | 概念验证 | Proof of Concept |
 | 信创 | 信息技术应用创新 | 中国自主可控的信息技术生态 |
