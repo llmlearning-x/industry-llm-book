@@ -1,0 +1,19 @@
+# mdBook build output
+/book/
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
