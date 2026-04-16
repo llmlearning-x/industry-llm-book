@@ -1,9 +1,7 @@
 [book]
-title = "行业大模型应用实践"
-subtitle = "从技术架构到落地方法论"
+title = "行业大模型应用实践：从技术架构到落地方法论"
 authors = ["Author"]
 language = "zh-CN"
-multilingual = false
 src = "src"
 
 [build]
