@@ -1,0 +1,55 @@
+\contentsline {chapter}{\numberline {1}第 1 章：大模型时代的行业变革}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}1.1 从通用大模型到行业大模型}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}大模型技术发展脉络}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}通用模型的局限性}{2}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}行业大模型的崛起}{2}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}1.2 行业大模型的价值全景}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}行业落地数据概览}{3}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}跨行业 ROI 分析}{3}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}关键趋势}{4}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}1.3 本书的阅读地图}{5}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}全书结构}{5}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}不同角色的推荐阅读路径}{5}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}1.4 本章小结}{6}{section.1.4}%
+\contentsline {section}{\numberline {1.5}延伸阅读}{6}{section.1.5}%
+\contentsline {chapter}{\numberline {2}第 2 章：行业大模型技术架构}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}2.1 核心技术栈全景}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}基座模型选型}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}提示词工程的工程化实践}{9}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}RAG：行业落地的第一选择}{10}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Agent：从对话到自主执行}{11}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}微调：让模型学会行业语言}{16}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}多模态融合}{16}{subsection.2.1.6}%
+\contentsline {section}{\numberline {2.2}2.2 部署架构模式}{17}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}公有云 API 调用}{17}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}私有化部署}{17}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}混合云架构}{18}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}信创环境适配}{18}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}2.3 工程化基础设施}{18}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}向量数据库选型}{18}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}数据管线}{22}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}可观测性}{22}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}2.4 本章小结}{23}{section.2.4}%
+\contentsline {section}{\numberline {2.5}延伸阅读}{23}{section.2.5}%
+\contentsline {chapter}{\numberline {3}第 3 章：行业大模型落地方法论}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}3.1 落地成熟度模型}{25}{section.3.1}%
+\contentsline {section}{\numberline {3.2}3.2 需求评估与场景选择}{26}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}业务价值 × 技术可行性矩阵}{26}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}MVP 设计原则}{26}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}不适合大模型的场景}{27}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}3.3 数据准备与知识库构建}{27}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}行业数据的特殊性}{27}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}知识库构建全流程}{27}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}数据质量评估框架}{28}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}3.4 模型选型与评估}{31}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}行业基准测试设计}{31}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}A/B测试与灰度发布策略}{32}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}ROI评估框架}{32}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}3.5 安全与合规}{33}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}数据隐私保护}{33}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}内容安全与审核机制}{33}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}行业合规要求}{34}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}ISO/IEC 42001：AI管理体系国际标准}{34}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}3.6 本章小结}{34}{section.3.6}%
+\contentsline {section}{\numberline {3.7}延伸阅读}{35}{section.3.7}%
+\contentsfinish 

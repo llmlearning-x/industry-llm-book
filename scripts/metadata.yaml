@@ -1,0 +1,42 @@
+---
+title: "行业大模型应用实践"
+subtitle: "从技术架构到落地方法论"
+author: "Author"
+date: "2026"
+lang: zh-CN
+CJKmainfont: "Songti SC"
+mainfont: "Songti SC"
+sansfont: "Hiragino Sans GB"
+monofont: "Menlo"
+fontsize: 11pt
+documentclass: book
+classoption: openany
+geometry:
+  - a4paper
+  - margin=2.5cm
+colorlinks: true
+linkcolor: oreilly-blue
+urlcolor: oreilly-blue
+toccolor: black
+toc: true
+toc-depth: 3
+number-sections: true
+top-level-division: chapter
+highlight-style: tango
+header-includes:
+  - \usepackage{xeCJKfntef}
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{fancyhdr}
+  - \usepackage{lastpage}
+  - \usepackage{tcolorbox}
+  - \tcbuselibrary{breakable,skins}
+  - \usepackage{enumitem}
+  - \setlist{nosep}
+  - \usepackage{caption}
+  - \captionsetup{font=small,labelfont=bf}
+  - \usepackage{hyperref}
+  - \hypersetup{colorlinks=true,linkcolor=oreilly-blue,urlcolor=oreilly-blue}
+  - \usepackage{xcolor}
+---

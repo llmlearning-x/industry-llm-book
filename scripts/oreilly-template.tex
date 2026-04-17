@@ -1,0 +1,268 @@
+% oreilly-template.tex — O'Reilly 风格中文书籍 LaTeX 模板
+% 适配 Pandoc 3.x + XeLaTeX + xeCJK
+\documentclass[11pt,a4paper,openany]{book}
+
+% ==================== 基础包 ====================
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\usepackage{enumitem}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\usepackage{fancyvrb}
+\usepackage{framed}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{adjustbox}
+\usepackage{calc}
+
+% Fix "No counter 'none'" error with Pandoc longtable
+\makeatletter
+\@ifundefined{c@none}{\newcounter{none}}{}
+\makeatother
+
+% Pandoc 3.9+ generates \real{} in table column specs
+\providecommand{\real}[1]{#1}
+
+% ==================== O'Reilly 调色板 ====================
+\definecolor{oreilly-blue}{RGB}{0,105,180}
+\definecolor{oreilly-dark}{RGB}{30,30,30}
+\definecolor{oreilly-gray}{RGB}{100,100,100}
+\definecolor{oreilly-lightgray}{RGB}{240,240,240}
+\definecolor{oreilly-red}{RGB}{200,50,50}
+\definecolor{oreilly-green}{RGB}{60,140,60}
+\definecolor{oreilly-orange}{RGB}{220,130,30}
+\definecolor{oreilly-bg}{RGB}{248,248,248}
+\definecolor{code-bg}{RGB}{245,245,245}
+\definecolor{code-border}{RGB}{220,220,220}
+\definecolor{tip-bg}{RGB}{230,243,255}
+\definecolor{warn-bg}{RGB}{255,243,224}
+\definecolor{note-bg}{RGB}{240,248,240}
+
+% ==================== Pandoc 语法高亮 ====================
+\definecolor{shadecolor}{RGB}{245,245,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor{oreilly-blue}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor{oreilly-orange}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor{oreilly-green}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor{oreilly-green}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor{oreilly-green}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor{oreilly-red}{#1}}
+\newcommand{\CharTok}[1]{\textcolor{oreilly-orange}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor{oreilly-orange}{#1}}
+\newcommand{\StringTok}[1]{\textcolor{oreilly-red}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor{oreilly-red}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor{oreilly-red}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor{oreilly-gray}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor{oreilly-gray}{\textit{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor{oreilly-gray}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor{oreilly-gray}{\textit{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor{oreilly-orange}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor{oreilly-blue}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor{oreilly-dark}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor{oreilly-blue}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor{oreilly-dark}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor{oreilly-orange}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor{oreilly-orange}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor{oreilly-orange}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor{oreilly-red}{\textbf{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor{oreilly-red}{\textbf{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor{oreilly-red}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+
+% ==================== 字体设置 ====================
+\setCJKmainfont{Songti SC}[
+    BoldFont=Songti SC Black,
+    ItalicFont=STSong
+]
+\setCJKsansfont{Hiragino Sans GB}
+\setCJKmonofont{Menlo}
+
+\setmainfont{Songti SC}[
+    BoldFont=Songti SC Black,
+    ItalicFont=Songti SC
+]
+\setsansfont{Hiragino Sans GB}
+\setmonofont{Menlo}[Scale=0.88]
+
+% ==================== 页面布局 ====================
+\usepackage[
+    a4paper,
+    top=2.5cm,
+    bottom=2.5cm,
+    left=2.8cm,
+    right=2.5cm,
+    headheight=15pt
+]{geometry}
+
+% ==================== 行距与段落 ====================
+\setstretch{1.35}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.4em}
+
+% ==================== 超链接 ====================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=oreilly-blue,
+    urlcolor=oreilly-blue,
+    citecolor=oreilly-blue,
+    pdfborder={0 0 0}
+}
+
+% ==================== 章节标题样式 ====================
+\titleformat{\part}[display]
+    {\normalfont\huge\bfseries\color{oreilly-dark}}
+    {\partname\ \thepart}{20pt}{\Huge}
+\titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries\color{oreilly-dark}}
+    {\chaptername\ \thechapter}{20pt}{\Huge\color{oreilly-blue}}
+\titlespacing*{\chapter}{0pt}{-20pt}{40pt}
+
+\titleformat{\section}
+    {\normalfont\Large\bfseries\color{oreilly-dark}}
+    {\thesection}{1em}{}
+\titleformat{\subsection}
+    {\normalfont\large\bfseries\color{oreilly-dark}}
+    {\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+    {\normalfont\normalsize\bfseries\color{oreilly-gray}}
+    {\thesubsubsection}{1em}{}
+
+% ==================== 页眉页脚 ====================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\thepage}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{\rightmark}
+\fancyhead[RO]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{oreilly-gray}\leaders\hrule height\headrulewidth\hfill}}
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+% ==================== 代码块样式 ====================
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{
+    commandchars=\\\{\},
+    fontsize=\small,
+    frame=single,
+    framesep=2mm,
+    rulecolor=\color{code-border},
+    baselinestretch=1.1,
+    xleftmargin=4mm,
+    xrightmargin=2mm
+}
+\DefineVerbatimEnvironment{Verbatim}{Verbatim}{
+    fontsize=\small,
+    frame=single,
+    framesep=2mm,
+    rulecolor=\color{code-border},
+    baselinestretch=1.1,
+    xleftmargin=4mm,
+    xrightmargin=2mm
+}
+
+% 代码背景色
+\let\oldverbatim\verbatim
+\renewcommand{\verbatim}{\footnotesize\oldverbatim}
+
+% ==================== 引用块样式 ====================
+\renewenvironment{quote}{
+    \begin{tcolorbox}[
+        colback=oreilly-bg,
+        colframe=oreilly-gray!40,
+        boxrule=0.5pt,
+        arc=2pt,
+        left=8pt,
+        right=8pt,
+        top=6pt,
+        bottom=6pt,
+        before skip=8pt,
+        after skip=8pt,
+        fontupper=\small
+    ]
+    \itshape
+}{
+    \end{tcolorbox}
+}
+
+% ==================== 表格样式 ====================
+\arrayrulecolor{oreilly-gray}
+
+% ==================== 目录样式 ====================
+\titlecontents{part}
+    [0pt]{\vspace{1em}\bfseries\large\color{oreilly-dark}}
+    {\contentslabel{2em}}{}
+    {\hfill\contentspage}
+
+\titlecontents{chapter}
+    [0pt]{\vspace{0.5em}\bfseries\color{oreilly-dark}}
+    {\contentslabel{2em}}{}
+    {\titlerule*[0.5em]{.}\contentspage}
+
+\titlecontents{section}
+    [2em]{\vspace{0.2em}}
+    {\contentslabel{2.5em}}{}
+    {\titlerule*[0.5em]{.}\contentspage}
+
+\titlecontents{subsection}
+    [4.5em]{\vspace{0.1em}\small}
+    {\contentslabel{3em}}{}
+    {\titlerule*[0.5em]{.}\contentspage}
+
+% ==================== Pandoc 兼容 ====================
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% ==================== 正文开始 ====================
+\begin{document}
+
+% ---- 封面页 ----
+\begin{titlepage}
+\begin{center}
+\vspace*{2cm}
+{\Huge\bfseries\color{oreilly-dark} $title$}\\[0.8cm]
+{\LARGE\color{oreilly-blue} $if(subtitle)$$subtitle$$endif$}\\[2cm]
+{\Large $if(author)$$author$$endif$}\\[1cm]
+{\large $if(date)$$date$$endif$}\\[3cm]
+\rule{\textwidth}{1pt}\\[0.5cm]
+{\color{oreilly-gray}\large 行业大模型技术架构 \textperiodcentered{} 落地方法论 \textperiodcentered{} 14 个行业实战}
+\vfill
+\end{center}
+\end{titlepage}
+
+% ---- 前言页 ----
+\frontmatter
+\pagestyle{plain}
+\tableofcontents
+\clearpage
+
+% ---- 正文 ----
+\mainmatter
+\pagestyle{fancy}
+
+$body$
+
+% ---- 附录 ----
+% appendices are included in body
+
+\end{document}
